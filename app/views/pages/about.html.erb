@@ -1,0 +1,12 @@
+<h1>About <%= @name %></h1>
+
+<h2>Skills:</h2>
+<table>
+  <% @skills.each do |skill| %>
+    <tr>
+      <td><%= skill.title %></td>
+      <td><%= skill.percent_utilized %></td>
+    <tr>
+  <% end %>
+</table>
+

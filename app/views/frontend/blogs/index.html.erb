@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>These are my Blogs</h1>
+
+<%= form_with url: frontend_blogs_url, method: :get do |form| %>
+  <%= form.label :title, "Search for:" %>
+  <%= form.text_field :title %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<div id="blogs">
+  <div>
+    Total found: <%= @blogs.count %>
+  </div>
+
+  <% @blogs.each do |blog| %>
+    <% render blog %>
+    <p>
+      <%= link_to "Show this blog", frontend_blog_path(blog) %>
+      <%= link_to "Show this blog in pdf", frontend_blog_path(blog, format: :pdf) %>
+    </p>
+  <% end %>
+</div>

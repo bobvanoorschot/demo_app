@@ -1,0 +1,14 @@
+<h1>Portfolios</h1>
+
+<ul>
+  <% @portfolios.each do |portfolio| %>
+    <a href="<%= url_for portfolio %>">
+    <li>
+        <%= image_tag portfolio.main_image, alt: portfolio.title %>
+      <h3>
+        <%= portfolio.title %>
+      </h3>
+    </li>
+    </a>
+  <% end %>
+<ul>

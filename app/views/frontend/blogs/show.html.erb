@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @blog %>
+
+<div>
+  <% @comments.each do |comment|  %>
+    <p><%= comment.id %> <%= comment.name %>, <i><%= comment.created_at %></i></p>
+  <% end  %>
+</div>
+
+<div>
+  <%= render 'form', comment: @comment, blog: @blog %>
+</div>
+

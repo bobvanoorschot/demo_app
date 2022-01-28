@@ -1,0 +1,27 @@
+<div id="<%= dom_id @blog %>">
+  <p>
+    <strong>Title:</strong>
+    <%= @blog.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= @blog.body %>
+  </p>
+
+  <p>
+    <strong>Comments:</strong>
+    <%= @blog.comments.length %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= @blog.status %>
+  </p>
+</div>
+
+<div>
+  <% @blog.comments.each do |comment|  %>
+    <p><%= comment.id %> <%= comment.name %>, <i><%= comment.created_at %></i></p>
+  <% end  %>
+</div>

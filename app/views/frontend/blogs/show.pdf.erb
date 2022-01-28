@@ -1,0 +1,9 @@
+
+
+<%= render @blog %>
+
+<div>
+  <% @comments.each do |comment|  %>
+    <p><%= comment.id %> <%= comment.name %>, <i><%= comment.created_at %></i></p>
+  <% end  %>
+</div>

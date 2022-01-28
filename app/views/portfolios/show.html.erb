@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <h1><%= @portfolio.title %><h1>
+
+  <div>
+    <%= image_tag @portfolio.main_image %>
+  </div>
+
+  <%= link_to 'Back to portfolios', portfolios_path %>
+  <%= link_to 'Delete my portfolio', @portfolio, method: :delete %>
+</div>
